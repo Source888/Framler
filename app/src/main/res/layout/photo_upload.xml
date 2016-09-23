@@ -1,0 +1,112 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.framler.framler.photo_upload">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/abc_input_method_navigation_guard">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="vertical"
+            tools:ignore="UselessParent"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/youf"
+                android:textColor="#FFFFFF"
+                android:id="@+id/textView4"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="150dp"
+                android:textSize="20dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/user_photo"
+                android:contentDescription="@string/user_photo"
+                android:layout_marginTop="-120dp"
+
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FFBBFF00"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bt_yellow" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/cam_load"
+                    android:background="@drawable/camerabt"
+                    android:contentDescription="@string/btcamera"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="25dp"
+
+                    android:layout_gravity="left" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/fol_load"
+                    android:background="@drawable/folbt"
+                    android:contentDescription="@string/btgall"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="45dp" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/backtoreg"
+                android:background="@drawable/okpht"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="?metaButtonBarStyle"
+            tools:ignore="UselessParent"
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <Button
+                style="?metaButtonBarButtonStyle"
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dummy_button" />
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

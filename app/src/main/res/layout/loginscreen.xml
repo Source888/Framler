@@ -1,0 +1,254 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000"
+    tools:context="com.framler.framler.loginscreen"
+    android:visibility="visible">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fullscreen_content"
+        android:contentDescription="@string/logscreenbg"
+        android:src="@drawable/bg_velo"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="invisible">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent"
+
+            android:layout_marginLeft="-4dp">
+
+
+        </LinearLayout>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/ВХОД"
+            android:id="@+id/login_button"
+            android:layout_alignBottom="@+id/logbg"
+
+            android:contentDescription="@string/buttlog"
+            app:layout_heightPercent="25%"
+            app:layout_widthPercent="44.9%"
+            app:layout_marginBottomPercent="19.95%"
+
+            app:layout_marginLeftPercent="28.7%"
+            android:background="@drawable/logbtpress"
+            android:clickable="true"
+
+            android:longClickable="true"
+            android:onClick="startScreen" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/logbg"
+            android:contentDescription="@string/loginbg"
+
+
+
+            android:background="@drawable/bg" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/enter_login"
+            android:id="@+id/welcomstr"
+            app:layout_marginTopPercent="15%"
+
+            app:layout_widthPercent="100%"
+
+            android:textColorHighlight="#ffffff"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:textAlignment="center" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+
+            android:id="@+id/login_field"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            app:layout_marginTopPercent="20%"
+            app:layout_widthPercent="80%"
+            app:layout_heightPercent="6%"
+            app:layout_marginRightPercent="10%"
+            app:layout_marginLeftPercent="10%"
+            android:background="@color/abc_input_method_navigation_guard"
+            android:textAlignment="inherit"
+            android:paddingLeft="10dp"
+            android:hint="@string/email" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView2"
+            android:src="@drawable/icon_login"
+            android:layout_gravity="center_vertical"
+            app:layout_marginTopPercent="20%"
+            app:layout_widthPercent="6%"
+            app:layout_heightPercent="6%"
+            app:layout_marginLeftPercent="82%"
+            android:contentDescription="@string/icolog" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordfield"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+
+            app:layout_marginTopPercent="30%"
+            app:layout_widthPercent="80%"
+            app:layout_heightPercent="6%"
+            app:layout_marginRightPercent="10%"
+            app:layout_marginLeftPercent="10%"
+            android:background="@color/abc_input_method_navigation_guard"
+            android:textAlignment="inherit"
+            android:paddingLeft="10dp"
+            android:hint="@string/pass" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView3"
+            android:src="@drawable/icon_pas"
+            android:layout_gravity="center_vertical"
+            app:layout_marginTopPercent="30%"
+            app:layout_widthPercent="6%"
+            app:layout_heightPercent="6%"
+            app:layout_marginLeftPercent="82%"
+            android:contentDescription="@string/icopas" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView4"
+            android:src="@drawable/horline"
+            app:layout_marginTopPercent="40%"
+            app:layout_widthPercent="95%"
+            app:layout_heightPercent="1%"
+            app:layout_marginRightPercent="2.5%"
+            app:layout_marginLeftPercent="2.5%"
+            android:contentDescription="@string/horline" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/orsocial"
+            android:id="@+id/textView"
+            android:layout_gravity="center_vertical"
+            app:layout_marginTopPercent="42%"
+            app:layout_widthPercent="98%"
+            app:layout_heightPercent="5%"
+            app:layout_marginRightPercent="1%"
+            app:layout_marginLeftPercent="1%"
+            android:textAlignment="center" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/vklogbt"
+            android:background="@drawable/icon_vk"
+            app:layout_marginTopPercent="46%"
+            app:layout_widthPercent="12%"
+            app:layout_heightPercent="7%"
+
+            app:layout_marginLeftPercent="30%"
+            android:contentDescription="@string/vklog" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fblogbtn"
+            android:background="@drawable/icon_fb"
+            app:layout_marginTopPercent="46%"
+            app:layout_widthPercent="12%"
+            app:layout_heightPercent="7%"
+
+            app:layout_marginLeftPercent="44%"
+            android:contentDescription="@string/fbbt" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@drawable/icon_google"
+            app:layout_marginTopPercent="46%"
+            app:layout_widthPercent="12%"
+            app:layout_heightPercent="7%"
+
+            app:layout_marginLeftPercent="58%"
+            android:contentDescription="@string/gbt"
+            android:id="@+id/gglsignbt"
+            android:longClickable="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView5"
+            app:layout_marginTopPercent="92%"
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="8%"
+            android:background="@drawable/bottom_line"
+            android:contentDescription="@string/botl" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noacc"
+            android:id="@+id/textView2"
+            android:layout_gravity="bottom"
+            app:layout_marginTopPercent="94%"
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="8%"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registration"
+            android:id="@+id/textView3"
+            android:layout_gravity="bottom"
+            app:layout_marginTopPercent="94%"
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="8%"
+            app:layout_marginLeftPercent="50%"
+            android:textAlignment="center"
+            android:textColor="#f9fd01"
+            android:onClick="regScreen" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+</FrameLayout>

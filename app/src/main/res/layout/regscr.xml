@@ -1,0 +1,361 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.framler.framler.regscr">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="@string/dummy_content"
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/dummy_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dummy_button" />
+
+        </LinearLayout>
+    </FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fillViewport="false"
+        android:background="@drawable/bg_main">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:layout_marginTop="80dp"
+                android:id="@+id/fotoframer"
+                android:text="@string/family"
+                android:background="@drawable/bt_yellow"
+                android:contentDescription="@string/fotoframe"
+                android:layout_gravity="center_horizontal"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FFBBFF00"
+                android:textAlignment="center"
+                android:clickable="true"
+                android:onClick="loadFoto"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/youphoto"
+                android:id="@+id/youphoto"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-100dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/regstr"
+                android:id="@+id/loginstring"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="118dp"
+
+                android:textColor="#ffffff"
+                android:textSize="16dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/regemail"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:drawable/editbox_dropdown_dark_frame"
+                android:paddingStart="15dp"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="false"
+                android:hint="@string/email" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView7"
+                android:background="@drawable/ic_mail"
+                android:layout_gravity="right"
+                android:layout_marginTop="-34dp"
+                android:layout_marginRight="38dp"
+                android:contentDescription="@string/mailico" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/regpass"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@android:drawable/editbox_dropdown_dark_frame"
+                android:paddingStart="15dp"
+                android:hint="@string/pass" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView9"
+                android:background="@drawable/icon_pas"
+                android:layout_gravity="right"
+                android:layout_marginTop="-34dp"
+                android:layout_marginRight="38dp"
+                android:contentDescription="@string/pasico" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView6"
+                android:background="@drawable/divide_line"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:contentDescription="@string/divline2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enternik"
+                android:id="@+id/enternik"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nikhelp"
+                android:id="@+id/villwievinrate"
+                android:textSize="10dp"
+                android:textColor="#fef85e"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nikjoke"
+                android:id="@+id/nikjoke"
+                android:textColor="#f2fd23"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_gravity="center_horizontal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nik"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:background="@android:drawable/editbox_dropdown_dark_frame"
+                android:paddingStart="15dp"
+                android:hint="@string/nikstring" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView8"
+                android:background="@drawable/icon_login"
+                android:layout_gravity="right"
+                android:layout_marginTop="-34dp"
+                android:layout_marginRight="38dp"
+                android:contentDescription="@string/nikicoreg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enterfio"
+                android:id="@+id/enterfio"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/namereg"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:background="@android:drawable/editbox_dropdown_dark_frame"
+                android:paddingStart="15dp"
+                android:hint="@string/namestring" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView10"
+                android:background="@drawable/icon_login"
+                android:layout_gravity="right"
+                android:layout_marginTop="-34dp"
+                android:layout_marginRight="38dp"
+                android:contentDescription="@string/nikico" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/famreg"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:background="@android:drawable/editbox_dropdown_dark_frame"
+                android:paddingStart="15dp"
+                android:hint="@string/familya" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView11"
+                android:background="@drawable/icon_login"
+                android:layout_gravity="right"
+                android:layout_marginTop="-34dp"
+                android:layout_marginRight="38dp"
+                android:contentDescription="@string/nikico" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView12"
+                android:background="@drawable/divide_line"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:contentDescription="@string/divline2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/socenter"
+                android:id="@+id/entersoc"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp">
+
+                <ImageButton
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:id="@+id/imageButton"
+                    android:layout_weight="1"
+                    android:background="@drawable/icon_vk"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:contentDescription="@string/vkreg" />
+
+                <ImageButton
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:id="@+id/imageButton2"
+                    android:layout_weight="1"
+                    android:background="@drawable/icon_fb"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:contentDescription="@string/fbreg" />
+
+                <ImageButton
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:id="@+id/imageButton3"
+                    android:layout_weight="1"
+                    android:background="@drawable/icon_ok"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:contentDescription="@string/okreg" />
+
+                <ImageButton
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:id="@+id/imageButton4"
+                    android:layout_weight="1"
+                    android:background="@drawable/icon_twit"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:contentDescription="@string/twreg" />
+
+                <ImageButton
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:id="@+id/imageButton5"
+                    android:layout_weight="1"
+                    android:background="@drawable/icon_google"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:contentDescription="@string/ggreg" />
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/gogo"
+                android:id="@+id/button"
+                android:background="@drawable/regbtpress"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="30dp"
+                android:onClick="register_register" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

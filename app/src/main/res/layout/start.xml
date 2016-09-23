@@ -1,0 +1,468 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.framler.framler.start">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="@string/dummy_content"
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="invisible">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent"
+
+            android:layout_marginLeft="-4dp">
+
+
+        </LinearLayout>
+
+
+    </android.support.percent.PercentRelativeLayout>
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:background="@drawable/icon_lightning">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startbgbt"
+            app:layout_marginTopPercent="70%"
+            app:layout_heightPercent="30%"
+            android:background="@drawable/bg_middle"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/startbgbt" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startbgmd"
+            app:layout_marginTopPercent="25%"
+            app:layout_heightPercent="45%"
+            android:background="@drawable/bgstartbottom"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/startbgmd" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startbgtop"
+            app:layout_marginTopPercent="0%"
+            app:layout_heightPercent="25%"
+            android:background="@drawable/bg_up"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/startbgtop" />
+
+        <com.framler.framler.MicardiFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/timetoday"
+            android:id="@+id/timepertoday"
+            android:textAlignment="center"
+            android:textSize="70dp"
+            app:layout_marginTopPercent="34%"
+            app:layout_widthPercent="80%"
+            app:layout_marginLeftPercent="10%"
+            app:layout_marginRightPercent="10%"
+            app:font="MICRADI.TTF"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/minutes"
+            android:id="@+id/labl_min"
+            app:layout_marginTopPercent="48%"
+            android:textAlignment="center"
+            app:layout_marginLeftPercent="26%"
+            app:layout_marginRightPercent="10%"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/seconds"
+            android:id="@+id/labl_sec"
+            app:layout_marginTopPercent="48%"
+            android:textAlignment="center"
+            app:layout_marginLeftPercent="58%"
+            app:layout_marginRightPercent="10%"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/you_have_for_today"
+            android:id="@+id/labl_you_have"
+            app:layout_marginTopPercent="30%"
+            app:layout_widthPercent="80%"
+            app:layout_marginLeftPercent="10%"
+            app:layout_marginRightPercent="10%"
+            android:textAlignment="center"
+            android:textSize="18dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/startstr"
+            android:id="@+id/start_bt"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="80%"
+            app:layout_marginLeftPercent="10%"
+            app:layout_marginRightPercent="10%"
+            app:layout_marginTopPercent="55.5%"
+            android:textSize="44dp"
+            android:textAlignment="center"
+            android:textColorHighlight="#ffffff" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_btn"
+            app:layout_marginTopPercent="55%"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="80%"
+            android:text="@string/start"
+            app:layout_marginLeftPercent="10%"
+            app:layout_marginRightPercent="10%"
+            android:background="@drawable/btn_start_border"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/start_btn"
+            android:textAlignment="center"
+            android:clickable="true" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating_btn"
+            app:layout_marginTopPercent="90%"
+            app:layout_marginLeftPercent="12%"
+            app:layout_heightPercent="7%"
+            app:layout_widthPercent="12%"
+            android:background="@drawable/icon_all_ratings"
+            android:contentDescription="@string/rating_btn" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stat_btn"
+            app:layout_marginTopPercent="90%"
+            app:layout_marginLeftPercent="44%"
+            app:layout_heightPercent="7%"
+            app:layout_widthPercent="12%"
+            android:background="@drawable/icon_all_stat"
+            android:contentDescription="@string/stat_btn" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/road_btn"
+            app:layout_marginTopPercent="90%"
+            app:layout_marginLeftPercent="76%"
+            app:layout_heightPercent="7%"
+            app:layout_widthPercent="12%"
+            android:background="@drawable/icon_all_roads"
+            android:contentDescription="@string/road_btn" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/all_ratings"
+            android:id="@+id/allrat"
+
+
+            app:layout_marginLeftPercent="11%"
+            app:layout_marginRightPercent="10%"
+            app:layout_marginTopPercent="98%"
+            android:textSize="8dp"
+            app:layout_widthPercent="14%"
+
+            android:textAlignment="center"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/all_statistic"
+            android:id="@+id/allstat"
+
+
+            app:layout_marginLeftPercent="42%"
+            app:layout_marginRightPercent="10%"
+            app:layout_marginTopPercent="98%"
+            android:textSize="8dp"
+            app:layout_widthPercent="16%"
+
+            android:textAlignment="center"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/all_roads"
+            android:id="@+id/allroad"
+
+
+            app:layout_marginLeftPercent="74%"
+            app:layout_marginRightPercent="10%"
+            app:layout_marginTopPercent="98%"
+            android:textSize="8dp"
+            app:layout_widthPercent="16%"
+
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/divline"
+            android:background="@drawable/divide_line"
+            app:layout_marginTopPercent="88%"
+            app:layout_widthPercent="90%"
+            app:layout_marginLeftPercent="5%"
+            app:layout_marginRightPercent="5%"
+            android:contentDescription="@string/divline" />
+        <ImageButton
+            app:layout_marginTopPercent="75%"
+            app:layout_marginLeftPercent="5%"
+            app:layout_widthPercent="14.8%"
+            app:layout_heightPercent="8.5%"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lightningbt"
+            android:background="@drawable/icon_lightning"
+            android:contentDescription="@string/lightningbt" />
+        <ImageButton
+            app:layout_marginTopPercent="75%"
+            app:layout_marginLeftPercent="23.8%"
+            app:layout_widthPercent="14.8%"
+            app:layout_heightPercent="8.5%"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timelapsbt"
+            android:background="@drawable/icon_timelaps"
+            android:contentDescription="@string/timelapsbt" />
+        <ImageButton
+            app:layout_marginTopPercent="75%"
+            app:layout_marginLeftPercent="42.6%"
+            app:layout_widthPercent="14.8%"
+            app:layout_heightPercent="8.5%"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ffbt"
+            android:background="@drawable/icon_fast_furious"
+            android:contentDescription="@string/ffbt" />
+        <ImageButton
+            app:layout_marginTopPercent="75%"
+            app:layout_marginLeftPercent="61.1%"
+            app:layout_widthPercent="14.8%"
+            app:layout_heightPercent="8.5%"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unstopbt"
+            android:background="@drawable/icon_unstopable"
+            android:contentDescription="@string/unstopbt" />
+        <ImageButton
+            app:layout_marginTopPercent="75%"
+            app:layout_marginLeftPercent="80.2%"
+            app:layout_widthPercent="14.8%"
+            app:layout_heightPercent="8.5%"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/megritmbt"
+            android:background="@drawable/icon_megarythm"
+            android:contentDescription="@string/megritmbt" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lightning_bike"
+            android:textSize="6dp"
+            android:id="@+id/textlb"
+            android:textColor="#05fc12"
+            app:layout_marginTopPercent="73%"
+            app:layout_marginLeftPercent="5%"
+            app:layout_widthPercent="14.8%"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/timelaps"
+            android:textSize="6dp"
+            android:id="@+id/texttl"
+            android:textColor="#f8aee3"
+            app:layout_marginTopPercent="73%"
+            app:layout_marginLeftPercent="23.8%"
+            app:layout_widthPercent="14.8%"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/fast_and_furious"
+            android:textSize="6dp"
+            android:id="@+id/textff"
+            android:textColor="#aebef8"
+            app:layout_marginTopPercent="73%"
+            app:layout_marginLeftPercent="41%"
+            app:layout_widthPercent="18%"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/unstopable"
+            android:textSize="6dp"
+            android:id="@+id/textunst"
+            android:textColor="#aebef8"
+            app:layout_marginTopPercent="73%"
+            app:layout_marginLeftPercent="61.1%"
+            app:layout_widthPercent="14.8%"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/megarythm"
+            android:textSize="6dp"
+            android:id="@+id/textmega"
+            android:textColor="#5ffb30"
+            app:layout_marginTopPercent="73%"
+            app:layout_marginLeftPercent="80.2%"
+            app:layout_widthPercent="14.8%"
+            android:textAlignment="center"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="31%"
+            app:layout_heightPercent="18.5%"
+            app:layout_marginTopPercent="3%"
+            app:layout_marginLeftPercent="32.5%"
+            android:id="@+id/bordprog"
+            android:background="@drawable/level_border"
+            android:contentDescription="@string/progres_bord" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/settingsButton"
+            android:background="@drawable/settongs_btn"
+            app:layout_marginTopPercent="8.9%"
+            app:layout_marginLeftPercent="60.8%"
+            app:layout_heightPercent="6.5%"
+            app:layout_widthPercent="11%"
+            android:contentDescription="@string/settbtn" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/upbg"
+            app:layout_widthPercent="27%"
+            app:layout_heightPercent="15.5%"
+            app:layout_marginTopPercent="3%"
+            app:layout_marginLeftPercent="3%"
+            android:contentDescription="@string/upbbg"
+            android:background="@drawable/photo_border" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/black_dragon"
+            android:id="@+id/usr_nick"
+            android:textColor="#ffbc03"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            app:layout_widthPercent="27%"
+            app:layout_marginLeftPercent="3%"
+            app:layout_marginTopPercent="20%"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/vladimir_dimchenkevich"
+            android:id="@+id/usrfio"
+            android:textAlignment="center"
+            app:layout_widthPercent="27%"
+            app:layout_marginLeftPercent="3%"
+            app:layout_marginTopPercent="22%"
+            android:textSize="6dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/place_in_overall_rating"
+            android:id="@+id/placelb"
+            app:layout_marginTopPercent="3%"
+            app:layout_widthPercent="27%"
+            android:textSize="12dp"
+            app:layout_marginLeftPercent="70%"
+            android:textAlignment="viewEnd"
+            android:textStyle="italic" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_12321"
+            android:id="@+id/nextplc"
+            app:layout_marginTopPercent="8%"
+            app:layout_widthPercent="24%"
+            android:textSize="16dp"
+            app:layout_marginLeftPercent="73%"
+            android:textAlignment="viewEnd"
+            android:textStyle="italic"
+            android:textColor="#fa9222" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_65465"
+            android:id="@+id/place"
+            app:layout_marginTopPercent="12%"
+            app:layout_widthPercent="24%"
+            android:textSize="22dp"
+            app:layout_marginLeftPercent="73%"
+            android:textAlignment="viewEnd"
+            android:textStyle="italic"
+            android:textColor="#fae422" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prevplace"
+            android:id="@+id/prevtplc"
+            app:layout_marginTopPercent="16%"
+            app:layout_widthPercent="24%"
+            android:textSize="16dp"
+            app:layout_marginLeftPercent="73%"
+            android:textAlignment="viewEnd"
+            android:textStyle="italic"
+            android:textColor="#fa9222" />
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+
+
+</FrameLayout>
